@@ -113,7 +113,7 @@ def main():
     
     #输出特征重要性评估
     rf.fit(x_train, y_train)
-    print(sorted(zip(map(lambda x: round(x, 4), rf.feature_importances_), dftrain.columns[1:]),reverse=True))
+    print(sorted(zip(map(lambda x: round(x, 4), rf.feature_importances_), dftrain.columns),reverse=True))
 #    importances = rf.feature_importances_
 #    indices = np.argsort(importances)[::-1]
 #    feat_labels = dftrain.columns
